@@ -1,0 +1,27 @@
+Pooja Details
+
+SELECT PD.id as id, PD.title as pooja_title, PC.name as Category, PD.short_description, PD.long_description, PD.status, PD.created_at
+  FROM pooja_details PD
+  JOIN pooja_category PC ON PC.id = PD.category_id  
+
+
+Pandit Details
+
+SELECT PD.id as id, U.username, U.password, PD.firstName, PD.lastName, U.mobile, U.email, U.pincode, U.address, PD.image, PD.specialization, PD.experience, PD.feePerCunsultation, PD.start_timing, PD.end_timing, PD.rating, PD.reviews, PD.status
+  FROM pandit_details PD
+  JOIN users U ON U.id = PD.user_id
+  
+
+
+Booking
+
+SELECT b.id,U.full_name as client_name, U.mobile as client_mobile, U.email as client_email , U.pincode as client_pincode, U.address as client_address, PD.firstName as pandit_firstName, PD.lastName pandit_lastName, PD.image as pandit_image, PD.specialization pandit_specialization, PD.experience as pandit_experience, PD.feePerCunsultation as pandit_feePerCunsultation, PD.start_timing as pandit_start_timing, PD.end_timing as pandit_end_timing, PD.rating as pandit_rating, PD.reviews as pandit_reviews,b.date as booking_date, b.time as booking_time, b.status as booking_status
+  FROM booking b
+  JOIN users U ON U.id = b.user_id
+  JOIN pandit_details PD ON PD.user_id = b.pandit_id;
+
+
+SELECT b.id,U.full_name as client_name, U.mobile as client_mobile, U.email as client_email , U.pincode as client_pincode, U.address as client_address, PD.firstName as pandit_firstName, PD.lastName pandit_lastName, PD.image as pandit_image, PD.specialization pandit_specialization, PD.experience as pandit_experience, PD.feePerCunsultation as pandit_feePerCunsultation, PD.start_timing as pandit_start_timing, PD.end_timing as pandit_end_timing, PD.rating as pandit_rating, PD.reviews as pandit_reviews,b.date as booking_date, b.time as booking_time, b.status as booking_status
+  FROM booking b
+  JOIN users U ON U.id = b.user_id
+  JOIN pandit_details PD ON PD.user_id = b.pandit_id where b.status = "success";

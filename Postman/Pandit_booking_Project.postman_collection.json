@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "14d0f021-1344-4744-a39d-a2ea46531bab",
+		"name": "Pandit_booking_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26499669"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Fetching Users Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetching User Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert an User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"full_name\": \"amit\",\r\n    \"username\": \"amit123\",\r\n    \"password\": \"b2fd8301040ce1dae22f4bfcd54017b0\",\r\n    \"mobile\": \"1100110011\",\r\n    \"email\": \"amit@gmail.com\",\r\n    \"pincode\": \"424003\",\r\n    \"address\": \"XYZ Street\",\r\n    \"type\": \"user\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Data",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5,\r\n    \"full_name\": \"amit\",\r\n    \"username\": \"amit123\",\r\n    \"password\": \"b2fd8301040ce1dae22f4bfcd54017b0\",\r\n    \"mobile\": \"1100110011\",\r\n    \"email\": \"amit@gmail.com\",\r\n    \"pincode\": \"100003\",\r\n    \"address\": \"NYC Street\",\r\n    \"type\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pandit Details",
+			"item": [
+				{
+					"name": "Fetching All Pandits Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/pandit_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pandit_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetching particular Pandit Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/pandit_details/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pandit_details",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert a Pandit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 4,\r\n    \"firstName\": \"Rahul\",\r\n    \"lastName\": \"Dindayal\",\r\n    \"specialization\": \"Expert In Pandit Field\",\r\n    \"start_timing\": \"11:00\",\r\n    \"end_timing\": \"08:00\",\r\n    \"status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/pandit_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pandit_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pandit Data",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2,\r\n    \"user_id\": 4,\r\n    \"firstName\": \"Rahul\",\r\n    \"lastName\": \"Dindayal\",\r\n    \"image\": \"rahul.jpg\",\r\n    \"specialization\": \"Expert In Pandit Field\",\r\n    \"experience\": \"\",\r\n    \"feePerCunsultation\": \"500\",\r\n    \"start_timing\": \"11:00\",\r\n    \"end_timing\": \"08:00\",\r\n    \"rating\": \"\",\r\n    \"reviews\": \"\",\r\n    \"status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/pandit_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pandit_details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pooja Details",
+			"item": [
+				{
+					"name": "Fetching All Pooja Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/pooja_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pooja_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetching particular Pooja Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5005/pooja_details/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pooja_details",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert a Pooja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_id\": 6,\r\n    \"title\": \"Tulsi Vivah Puja\",\r\n    \"short_description\": \"We make offerings to a tulsi mata in order to receive blessings.\",\r\n    \"status\": \"active\",\r\n    \"created_at\": \"2023-04-26T11:27:01.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/pooja_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pooja_details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Pooja Data",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 6,\r\n    \"category_id\": 6,\r\n    \"title\": \"Tulsi Vivah Puja\",\r\n    \"short_description\": \"We make offerings to a tulsi mata in order to receive blessings.\",\r\n    \"status\": \"active\",\r\n    \"created_at\": \"11:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5005/pooja_details",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"pooja_details"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
